@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Expense</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.5/axios.min.js"></script>
+    <style>
+        body {
+            background-color: rgb(156, 190, 162);
+            border-color: rgb(65, 153, 153);
+
+        }
+
+        div {
+            /* height: 200px;
+            width :200px; */
+            display: inline-block;
+            background-color: rgb(69, 124, 124);
+            border: 1px solid black;
+        }
+
+        #page-button {
+            display: block;
+            margin-left: 50%;
+            border: none;
+        }
+
+        form {
+            align-content: center;
+            width: 100%;
+        }
+
+        button {
+            background-color: green;
+        }
+
+        a {
+            align-items: center;
+            margin-left: 1cm;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Dashboard</h1>
+    <div>
+        <form action="" onsubmit="addExpense(event)">
+            <h2>Expense Table</h2>
+            <input type="number" name="amount" id="amount" placeholder="Enter Expence amount">
+            <input type="description" name="description" id="description" placeholder="Enter description">
+            <br>
+            <label for="category">Enter category</label>
+            <select name="category" id="category">
+                <option value="food">Food</option>
+                <option value="sharemarket">Share Market</option>
+                <option value="petrol">Fuel</option>
+                <option value="cloths">Cloths</option>
+                <option value="stationary">Statoinary</option>
+                <option value="hardware">Hardware</option>
+            </select>
+            <br>
+            <button type="submit">Add Expence</button>
+        </form>
+        <button style="margin : 5%;" id="rzp-btn1">Buy Premium Membership</button>
+        <label style="margin : 5%; display: block;" id="message"></label>
+    </div>
+    <div>
+        <h3>Downloaded Files</h3>
+        <ul id="datafile">
+
+        </ul>
+    </div>
+    <div>
+        <h3>Leader Board</h3>
+        <ul id="lb">
+
+        </ul>
+    </div>
+    <br>
+    <div style="display: block">
+        <h3>Expense</h3>
+        <label for="rows"> Rows per Page</label>
+        <select name="rows" id="rows" onchange="changeRows()">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+        </select>
+        <ul id="items">
+
+        </ul>
+        <div id="page-button">
+
+        </div>
+    </div>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="userExpense.js"></script>
+</body>
+
+</html>

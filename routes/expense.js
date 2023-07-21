@@ -3,7 +3,7 @@ const router = express.Router();
 const expenseController = require('../controller/expense');
 const userAuthentication = require('../middleware/auth');
 
-router.get('/', expenseController.getExpense);
+// router.get('/', expenseController.getExpense);
 
 router.get('/get-expenses/', userAuthentication.athenticate, expenseController.getExpenses);
 

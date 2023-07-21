@@ -56,40 +56,11 @@
         </div>
         <div>
             <button type="submit" style="background-color:green">Sign Up</button>
-            <a href="http://localhost:3000/user/login">Already a user - Login</a>
+            <a href="http://localhost:3000/login/login.html">Already a user - Login</a>
         </div>
     </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
-    <script>
-        async function signUp(e) {
-            try {
-                e.preventDefault()
-                const name = e.target.name.value;
-                const email = e.target.email.value;
-                const password = e.target.password.value;
-
-                const signUpObj = {
-                    name,
-                    email,
-                    password
-                }
-                const user = await axios.post("http://localhost:3000/user/sign-up", signUpObj)
-                if (user.status === 201) {
-                    alert("user sign-up successfully");
-                    window.location.href = "http://localhost:3000/user/login"
-                } else {
-                    throw new Error("user not created");
-                }
-            }
-            catch (err) {
-                if (err.status === 500) {
-                    window.alert("user is alredy there");
-                } else {
-                    window.alert(err)
-                }
-            }
-        }
-    </script>
+    <script src="signUp.js"></script>
 </body>
 
 </html>

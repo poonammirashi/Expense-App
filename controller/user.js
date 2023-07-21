@@ -3,10 +3,6 @@ const path = require("path");
 const bcrypt = require('bcrypt')
 const userService = require("../services/usersServices");
 
-exports.getSignUpPage = (req, res) => {
-    res.sendFile(path.join("C:/Users/Admin/Desktop/Expence tracker App html-part/signUp.html"))
-};
-
 exports.postsignUpPage = async (req, res, next) => {
     try {
         const name = req.body.name;
@@ -31,9 +27,6 @@ exports.postsignUpPage = async (req, res, next) => {
     }
 }
 
-exports.getLoginPage = (req, res) => {
-    res.sendFile(path.join("C:/Users/Admin/Desktop/Expence tracker App html-part/login.html"))
-}
 exports.postLoginPage = async (req, res) => {
     try {
         const { email, password } = req.body;

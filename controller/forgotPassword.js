@@ -10,10 +10,6 @@ apiKey.apiKey = process.env.SENDINBLUE_API_KEY;
 const User = require('../model/users');
 const Resetpw = require('../model/forgotPasswordRequests');
 
-exports.forgotpage = (req, res) => {
-    res.sendFile(path.join("C:/Users/Admin/Desktop/Expence tracker App html-part/forgotPassword.html"))
-}
-
 exports.postForgotPassword = async (req, res) => {
     try {
         const { email } = req.body;

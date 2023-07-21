@@ -34,9 +34,6 @@ exports.getfiles = async (req, res) => {
     }
 }
 
-exports.getExpense = (req, res) => {
-    res.sendFile(path.join("C:/Users/Admin/Desktop/Expence tracker App html-part/userExpense.html"))
-}
 
 exports.postAddExpense = async (req, res) => {
     const t = await sequelize.transaction();
