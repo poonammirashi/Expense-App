@@ -57,5 +57,5 @@ fileUrl.belongsTo(User);
 sequelize
 .sync()
 .then(result => {
-    app.listen(process.env.PORT_NUMBER ,console.log("app is listening"))
+    app.listen(process.env.PORT_NUMBER || 3000,console.log("app is listening"))
 }).catch(err => console.log(err));
