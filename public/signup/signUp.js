@@ -1,4 +1,3 @@
-const host = "54.226.95.145" || "54.226.95.145" ;
 
 async function signUp(e) {
     try {
@@ -12,10 +11,10 @@ async function signUp(e) {
             email,
             password
         }
-        const user = await axios.post(`http://${host}:3000/user/sign-up`, signUpObj)
+        const user = await axios.post("http://54.226.95.145:3000/user/sign-up", signUpObj)
         if (user.status === 201) {
             alert("user sign-up successfully");
-            window.location.href = `http://${host}:3000/login/login.html`
+            window.location.href = "http://54.226.95.145:3000/login/login.html"
         } else {
             throw new Error("user not created");
         }
