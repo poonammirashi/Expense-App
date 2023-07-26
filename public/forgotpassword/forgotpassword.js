@@ -3,7 +3,7 @@ async function recovery(e) {
         e.preventDefault();
     const email = document.getElementById("email").value;
     console.log(email);
-    const user = await axios.post("http://54.226.95.145:3000/password/forgot-password", {email});
+    const user = await axios.post("http://44.205.112.174:3000/password/forgot-password", {email});
     console.log(user);
     }
     catch(err) {

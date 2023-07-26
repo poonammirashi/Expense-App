@@ -32,7 +32,7 @@ exports.postForgotPassword = async (req, res) => {
                 to: receivers,
                 subject: 'sending from node js',
                 textContent: 'click to set new password',
-                htmlContent: `<div><h3>Reset Password</h3></div><a href="http://54.226.95.145:3000/password/resetpassword/${id}">click here</a>`
+                htmlContent: `<div><h3>Reset Password</h3></div><a href="http://44.205.112.174:3000/forgotpassword/forgotpassword.html/${id}">click here</a>`
             })
             console.log(useremail);
             res.status(200).json({ message: 'mail has been sent to users email', success: true })
